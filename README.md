@@ -4,22 +4,7 @@
 
 Welcome to **Mostachfa LINK** – an intelligent, web-based emergency management system designed to transform hospital operations and save lives! 💡🏥
 
----
 
-## 📚 Table of Contents
-
-- [Introduction](#introduction)
-- [Project Context](#project-context)
-- [General and Specific Goals](#general-and-specific-goals)
-- [Features](#features)
-- [Team](#team)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
----
 
 ## 🚀 Introduction
 
@@ -58,17 +43,6 @@ Develop an intelligent emergency management system that empowers hospitals to ma
 
 ---
 
-## ✨ Features
-
-- **📊 Real-Time Dashboard:** Monitor patient flow, resource availability, and critical statistics at a glance.
-- **🔍 Predictive Analytics:** Anticipate emergency trends and prepare in advance.
-- **🚦 Automated Patient Classification:** Prioritize care based on the severity of conditions.
-- **💬 Integrated Messaging:** Secure, real-time communication for all emergency team members.
-- **⚙️ Resource Optimization:** Efficiently manage hospital assets in real time.
-- **🖥️ User-Friendly Interface:** Intuitive design for quick adoption by busy medical staff.
-
----
-
 ## 👩‍💻 Team
 
 **Queen Code** – a dynamic team of innovators dedicated to saving lives through technology:
@@ -86,9 +60,9 @@ Follow these steps to set up **Mostachfa LINK** on your local machine for develo
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or later) 🖥️
+- [Node.js](https://nodejs.org/)  🖥️
 - [Git](https://git-scm.com/) 🔧
-- [Docker](https://www.docker.com/) (optional, for containerized deployment) 🐳
+- [Docker](https://www.docker.com/)  🐳
 
 ### Installation
 
