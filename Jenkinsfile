@@ -7,35 +7,50 @@ pipeline {
     }
 
     stages {
+        stage('Debug') {
+            steps {
+                sh 'ls -la'
+                sh 'ls -la register'
+            }
+        }
+
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                dir('register') {
+                    sh 'npm install'
+                }
             }
         }
 
         stage('Run tests') {
             steps {
-                sh 'npm test'
+                dir('register') {
+                    sh 'npm test'
+                }
             }
         }
 
         stage('Build application') {
             steps {
-                sh 'npm run build'
+                dir('register') {
+                    sh 'npm run build'
+                }
             }
         }
 
         stage('SonarQube Analysis') {
             steps {
-                sh """
-                    ${env.SONAR_SCANNER_HOME}/bin/sonar-scanner \
-                      -Dsonar.projectKey=nodeapp \
-                      -Dsonar.projectName=nodeapp \
-                      -Dsonar.projectVersion=1.0 \
-                      -Dsonar.sources=. \
-                      -Dsonar.login=${env.SONAR_TOKEN} \
-                      -Dsonar.host.url=http://localhost:9000
-                """ 
+                dir('register') {
+                    sh """
+                        ${env.SONAR_SCANNER_HOME}/bin/sonar-scanner \
+                          -Dsonar.projectKey=nodeapp \
+                          -Dsonar.projectName=nodeapp \
+                          -Dsonar.projectVersion=1.0 \
+                          -Dsonar.sources=. \
+                          -Dsonar.login=${env.SONAR_TOKEN} \
+                          -Dsonar.host.url=http://localhost:9000
+                    """
+                }
             }
         }
     }
@@ -49,3 +64,4 @@ pipeline {
         }
     }
 }
+
