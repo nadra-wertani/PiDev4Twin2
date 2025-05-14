@@ -5,7 +5,7 @@ pipeline {
         SONAR_SCANNER_HOME = tool 'MySonarQubeServer'
         SONAR_TOKEN = credentials('sonar-token')
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-nadra') // Crée cette credential dans Jenkins
-        IMAGE_NAME = 'nadra-wertni/register-app'
+        IMAGE_NAME = 'nadrawertani/mostachfalink-app'
     }
 
     stages {
